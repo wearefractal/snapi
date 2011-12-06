@@ -1,19 +1,45 @@
-**Nothing here yet**
+**snapi is a simple plug-and-play API server**
 
 
 ## Installation
     
-To install APPNAME, use [npm](http://github.com/isaacs/npm):
+To install snapi, use [npm](http://github.com/isaacs/npm):
 
-    $ npm install -g APPNAME
+    $ npm install snapi
 
 ## Usage
 
-Nothing here yet
+```
+var snapi = require('snapi'),
+path = require('path');
+snapi.run(path.join(__dirname, './myCoolAPIFolder/'), 1337);
+```
+
+API services are loaded dynamically from the specified folder so you can add functionality without even restarting.
+
+## Routing
+Create a file for each API service in your specified folder.
+
+Example API service:
+
+```
+module.exports.exec = function (res, args){ 
+  res.end(args.name + ", we are online!");
+};
+```
+
+The exec function will receive two arguments: a standard httpResponse object for replying and an arguments object.
+
+## HTTP Methods
+GET/DELETE are parsed by querystring. Example: ```curl http://localhost:1337/status?name=contra&something=else```
+
+POST/PUT are parsed by JSON. Example: ```curl -i -X POST -d '{"name":"contra", "something": "else"}' http://localhost:1337/status```
+
+These requests will get the same response from the example.
 
 ## Examples
 
-You can view further examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
+You can view further examples in the [example folder.](https://github.com/wearefractal/snapi/tree/master/examples)
 
 ## LICENSE
 

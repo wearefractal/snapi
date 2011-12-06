@@ -1,16 +1,14 @@
 {
-   "name":"APPNAME",
-   "description":"Nothing here yet",
+   "name":"snapi",
+   "description":"Pluggable API server",
    "version":"0.0.1",
-   "homepage":"http://github.com/wearefractal/APPNAME",
-   "repository":"git://github.com/wearefractal/APPNAME.git",
+   "homepage":"http://github.com/wearefractal/snapi",
+   "repository":"git://github.com/wearefractal/snapi.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
    "main":"./lib/main.coffee",
    
    "dependencies":{
-      "coffee-script":"*",
-      "node-log":"*",
-      "protege":"*"
+      "coffee-script":"*"
    },
    "engines":{
       "node":">= 0.4.0"
@@ -18,7 +16,7 @@
    "licenses":[
       {
          "type":"MIT",
-         "url":"http://github.com/wearefractal/APPNAME/raw/master/LICENSE"
+         "url":"http://github.com/wearefractal/snapi/raw/master/LICENSE"
       }
    ]
 }
