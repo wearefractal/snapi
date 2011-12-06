@@ -2,7 +2,7 @@
 
 ### Minor
 
-  * Nothing here yet
+  * Location scoping to simplify path specification
 
 ### Major
 
