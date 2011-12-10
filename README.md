@@ -9,7 +9,7 @@ To install snapi, use [npm](http://github.com/isaacs/npm):
 
 ## Usage
 
-```
+```javascript
 var snapi = require('snapi'),
 path = require('path');
 snapi.run(path.join(__dirname, './myCoolAPIFolder/'), 1337);
@@ -22,7 +22,7 @@ Create a file for each API service in your specified folder.
 
 Example API service:
 
-```
+```javascript
 module.exports.exec = function (res, args){ 
   res.end(args.name + ", we are online!");
 };
